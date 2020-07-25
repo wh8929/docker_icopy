@@ -2,9 +2,7 @@
 
 mongodb docker install
 
-1. `docker run -d --name mongo --network host\
-      -v /root/mongodb/db:/data/db \
-      wh89/newb:mongodb_alpine`
+1. `docker run -d --name mongo --network host -v /root/mongodb/db:/data/db wh89/newb:mongodb_alpine`
   
 2. `docker exec -ti mongo mongo admin -u icopy -p icopy222 /root/create_admin.js`
 
