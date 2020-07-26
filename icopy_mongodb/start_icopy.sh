@@ -27,8 +27,9 @@ if [ ! "$(docker ps -a -q -f name=icopy)" ]; then
                     -v $sa_folder:/root/accounts \
                     -v $(pwd)/conf.toml:/root/iCopy/config/conf.toml \
                     -w /root/iCopy \
-                    wh89/newb:icopy_mongodb && \
-
+                    wh89/newb:icopy_mongodb
+					
+                sleep 2
                 docker exec -d icopy mongo admin /root/create_admin.js && \
                 docker exec -d icopy python3 iCopy.py
             fi
