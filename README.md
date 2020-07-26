@@ -17,3 +17,12 @@ icopy docker install
    ( need to type your rclone.conf path and sa folder path. default /root/.config/rclone/rclone.conf and /root/accounts )
 
 * if want to upgrade icopy verion use `docker exec -ti icopy apk add git && git pull` 
+
+icopy and mongodb docker install
+
+1. follow icopy docker install step 1 and 2.
+
+2. use start_icopy.sh to start docker.
+
+
+p.s. if you want change mongodb user and password, then you need to edit create_admin.js and conf.toml.
