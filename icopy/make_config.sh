@@ -27,8 +27,8 @@ create_icopy_config() {
         fi
         sed -i "s/Your mongodb user_Passwd HERE/$mongodbpwd/g" conf.toml
         read -p "请输入sa文件夹，结尾不要加\ (回车默认/root/accounts): " safolder
-		if [ -z "${sa_folder}" ]; then
-                sa_folder=/root/accounts
+		if [ -z "${safolder}" ]; then
+                safolder=/root/accounts
         fi
         sed -i 's# = "/root/accounts"# = "'$safolder'"#g' conf.toml
 }
