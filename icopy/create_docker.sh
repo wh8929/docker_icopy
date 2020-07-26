@@ -15,7 +15,7 @@ if [ ! -f $rclone_conf ]; then
     echo " 请确认rclone.conf在设定位置 "
     exit 1
 else
-    if ! ls -A $sa_folder/*.json > /dev/null 2>&1; then
+    if [ ! ls -A $sa_folder/*.json > /dev/null 2>&1 ]; then
         echo " $sa_folder 文件夹没有sa文件 "
         exit 2
     else

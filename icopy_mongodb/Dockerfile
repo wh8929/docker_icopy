@@ -2,7 +2,6 @@ FROM wh89/newb:mongodb_alpine
 
 VOLUME /data/db
 EXPOSE 27017
-
 COPY create_admin.js run.sh /root/
 
 RUN apk update && apk add git gcc libressl-dev libffi-dev musl-dev python3-dev bash && \

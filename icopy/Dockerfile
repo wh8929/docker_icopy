@@ -20,3 +20,5 @@ RUN apk add --no-cache \
         /bin/bash -c 'chmod +x fclone-v0.3.1-linux-amd64/fclone' && \
         mv fclone-v0.3.1-linux-amd64/fclone /usr/bin/fclone && fclone version && \
         rm -r fclone-v0.3.1-linux-amd64 && rm fclone-v0.3.1-linux-amd64.zip
+		
+CMD [ "python3", "/root/iCopy/iCopy.py" ]
