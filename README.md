@@ -1,8 +1,9 @@
 # docker_icopy
 
-mongodb docker install
+mongodb docker install 
 
 1. `docker run -d --name mongo --network host -v /root/mongodb/db:/data/db wh89/newb:mongodb_alpine`
+   if you using centos pls use `docker volume create mongodb`. then use mongodb replace /root/mongodb/db mount path.
   
 2. `docker exec -ti mongo mongo admin /root/create_admin.js`
 
