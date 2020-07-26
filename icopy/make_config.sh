@@ -1,5 +1,5 @@
 create_icopy_config() {
-        wget https://github.com/fxxkrlab/iCopy/raw/master/config/conf.toml.example
+        curl -o conf.toml.example https://github.com/fxxkrlab/iCopy/raw/master/config/conf.toml.example
         mv conf.toml.example conf.toml
         read -e -p "是否使用本地mongodb? [Y/n] :" yn
         [[ -z "${yn}" ]] && yn="y"
