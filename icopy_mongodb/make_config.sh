@@ -15,7 +15,7 @@ create_icopy_config() {
         read -p "请输入fclone配置名 (比如gc) / pls type your remote name: " remote
         sed -i 's/ = ""/ = "'$remote'"/g' conf.toml
         read -p "请输入mongodb数据库连接 (本地数据库链接为 localhost ): " mongodblink
-        sed -i "s/Your database address here/$mongodblink/g" conf.toml
+        sed -i "s#Your database address here#$mongodblink#g" conf.toml
         read -p "请输入mongodb数据库的用户 (回车默认icopy): " mongodbuser
 		if [ -z "${mongodbuser}" ]; then
                 mongodbuser=icopy
